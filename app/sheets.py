@@ -5,10 +5,10 @@ All direct interactions with Google Sheets
 should live in this file.
 """
 
+import os
 import gspread
 from google.oauth2.service_account import Credentials
 from config import SCOPES, CREDS_FILE, SPREADSHEET_ID, SHEET_NAME
-
 
 # -------------------------
 # Sheet Connection
@@ -18,8 +18,11 @@ def get_sheet():
     """
     Authorizes and returns the worksheet instance.
     """
+    BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    CREDS_PATH = os.path.join(BASE_DIR, CREDS_FILE)
+    
     creds = Credentials.from_service_account_file(
-        CREDS_FILE,
+        CREDS_PATH,
         scopes=SCOPES
     )
     client = gspread.authorize(creds)
