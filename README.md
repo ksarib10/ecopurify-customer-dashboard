@@ -126,5 +126,5 @@ https://dashboard.ecopurify.io
 
 ## 👤 Author
 
-Developed by Sarib Yar Khan
-For EcoPurify
+- Developed by **Sarib Khan**
+- For EcoPurify
