@@ -57,19 +57,33 @@ Triggered via `/refresh`.
 ## 📁 Project Structure
 
 app/
+
 ├── app.py # Flask routes & session logic
+
 ├── utils.py # Date parsing & health logic
+
 ├── auth_service.py # Authentication
+
 ├── sheets.py # Google Sheets helpers
+
 ├── static/
+
 │ ├── css/style.css
+
 │ ├── js/login.js
+
 │ ├── js/dashboard.js
+
 │ └── images/
+
 ├── templates/
+
 │ ├── login.html
+
 │ └── dashboard.html
+
 credentials/
+
 requirements.txt
 
 ---
