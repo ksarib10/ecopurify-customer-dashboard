@@ -1,6 +1,7 @@
 # EcoPurify Customer Dashboard
 
-A production-grade **customer dashboard** for managing RO (Reverse Osmosis) water plants, built for a real client.
+- Production **dashboard for EcoPurify customers** to monitor RO (Reverse Osmosis) water plants health,
+service status, and plant details.
 
 ---
 
@@ -21,7 +22,7 @@ A production-grade **customer dashboard** for managing RO (Reverse Osmosis) wate
 
 ### Backend
 - Python
-- Flask
+- Flask (Gunicorn)
 - gspread
 - Google Service Account
 
@@ -32,6 +33,10 @@ A production-grade **customer dashboard** for managing RO (Reverse Osmosis) wate
 
 ### Database
 - Google Sheets
+
+### Hosting
+- Render
+- Hostinger
 
 ---
 
@@ -105,10 +110,13 @@ python -m venv venv
 source venv/bin/activate  # Windows: venv\\Scripts\\activate
 pip install -r requirements.txt
 python app/app.py
+```
+
+### Live URL
+https://dashboard.ecopurify.io
 
 
-
-📝 Notes
+## 📝 Notes
 
 - This is a real client project
 - Google Sheet is managed manually by admin
@@ -116,7 +124,7 @@ python app/app.py
 - Code prioritizes clarity & maintainability
 
 
-👤 Author
+## 👤 Author
 
 Developed by Sarib Yar Khan
 For EcoPurify
