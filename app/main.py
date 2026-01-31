@@ -18,8 +18,7 @@ app = Flask(
     template_folder="templates",
     static_folder="static"
 )
-app.secret_key = "ecopurify-secret-key"
-
+app.config.from_object("config")
 
 # -------------------------
 # Authentication
@@ -174,4 +173,4 @@ def logout():
 # -------------------------
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000, debug=True)
+    app.run(host="0.0.0.0", port=5000)
