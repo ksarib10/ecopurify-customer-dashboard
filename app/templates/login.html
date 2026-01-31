@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>EcoPurify | Customer Login</title>
+  
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image.jpg" href="{{ url_for('static', filename='images/image.jpg') }}">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+  <div class="login-wrapper">
+    <div class="login-card">
+
+      <img src="{{ url_for('static', filename='images/image.jpg') }}" alt="EcoPurify" class="logo">
+
+      <h2>Customer Portal</h2>
+      <p class="subtitle">Secure access to your system details</p>
+
+      <form id="loginForm" action="javascript:void(0);">
+        <div class="input-group">
+          <input type="text" id="customer_id" placeholder="Customer ID" required />
+        </div>
+
+        <div class="input-group password-group">
+          <input
+            type="password"
+            id="password"
+            placeholder="Password"
+            required
+          />
+
+          <span class="toggle-password" id="togglePassword">
+            👁️
+          </span>
+        </div>
+
+        <button type="submit" id="loginBtn">
+          Login
+        </button>
+      </form>
+
+      <p id="errorMsg"></p>
+    </div>
+  </div>
+
+  <!-- JS -->
+  <script src="{{ url_for('static', filename='js/login.js') }}"></script>
+</body>
+</html>
