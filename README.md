@@ -63,7 +63,7 @@ Triggered via `/refresh`.
 
 app/
 
-├── app.py # Flask routes & session logic
+├── main.py # Flask routes & session logic
 
 ├── utils.py # Date parsing & health logic
 
@@ -109,7 +109,7 @@ requirements.txt
 python -m venv venv
 source venv/bin/activate  # Windows: venv\\Scripts\\activate
 pip install -r requirements.txt
-python app/app.py
+python app/main.py
 ```
 
 ### Live URL
