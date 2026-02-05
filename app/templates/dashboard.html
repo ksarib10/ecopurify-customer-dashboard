@@ -69,7 +69,11 @@
         <p class="service-info">
           Last serviced: <strong>{{ plant.last_service_date }}</strong>
           · {{ days_passed }} days ago
-          · <span class="risk-text">Service risk approaching</span>
+        {% if days_passed >= 40 %}
+          · <span class="risk-text danger">Service overdue</span>
+        {% elif days_passed >= 20 %}
+          · <span class="risk-text warning">Service risk approaching</span>
+        {% endif %}
         </p>
 
       </div>
